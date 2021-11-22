@@ -1,0 +1,548 @@
+// Write a Program that accepts two Strings as command line arguments and generate the output in
+// a specific way as given below.
+public class Program1 {
+    public static void main(String args[]) {
+        
+      System.out.println(args[0]+" Technologies "+ args[1]);
+    }
+}
+
+
+//Write a Program to accept a String as a Command line argument and the
+// program should print a Welcome message.
+public class Program2 {
+    public static void main(String args[]) {
+        
+      System.out.println("Welcome "+args[0]);
+    }
+}
+
+//Write a Program to accept two integers through the command line 
+//argument and print the sum of the two numbers
+public class Program3 {
+    public static void main(String args[]) {
+      int var1 = Integer.parseInt(args[0]);
+      int var2 = Integer.parseInt(args[1]);
+      System.out.println(var1+var2);
+    }
+}
+
+//Write a program to check if a given number is Positive, Negative, or Zero.
+import java.util.Scanner;
+public class Program4 {
+    public static void main(String args[]) {
+
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int a = obj.nextInt();
+        if(a==0){
+            System.out.println("Number is Zero");
+        }
+        if(a<0){
+            System.out.println("Number is Negative");
+
+        }
+        if(a>0){
+            System.out.println("Number is Positive");
+        }
+        obj.close();
+    }
+}
+
+// Write a program to check if a given number is odd or even.
+import java.util.Scanner;
+public class Program5 {
+    public static void main(String args[]) {
+
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int a = obj.nextInt();
+        if(a%2==0){
+            System.out.println("Number is Even");
+        }
+        else{
+            System.out.println("Number is Odd");
+        }
+        obj.close();
+    }
+}
+
+// Write a program to check if the program has received command line arguments or not. 
+// If the program has not received the values then print "No Values", else 
+// print all the values in a single line separated by ,(comma).
+public class Program6 {
+    public static void main(String args[]) {
+        if(args.length==0){
+            System.out.println("No Values");
+        }
+        else{
+            for(int i=0;i<args.length;i++){
+                System.out.print(args[i]);
+                if(i==args.length-1){
+                    break;
+                }
+                System.out.print(", ");
+
+            }
+        }
+    }
+}
+
+//Initialize two character variables in a program and display the characters in alphabetical order.
+
+public class Program7 {
+    public static void main(String[] args) {
+        char item1 = 's';
+        char item2 = 'g';
+        if(item1>item2){
+            System.out.println(item2+ "," + item1);
+        }
+        else{
+            System.out.println(item1+","+item2);
+        }
+    }
+    
+}
+
+//Initialize a character variable in a program and if the value is \
+//alphabet then print "Alphabet" if it’s a    number then print "Digit" and 
+//for other characters print "Special Character"
+
+import java.util.Scanner;
+public class Program8 {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        System.out.println("Enter a character");
+        char char1 =obj.next().charAt(0);
+        if(char1>=48 && char1<=57)
+        {
+            System.out.print("char is Digit");
+    
+        }
+        else if((char1>='a' && char1<='z')||(char1>='A' && char1<='Z'))
+        {
+            System.out.print("char is Alphabet");
+        }
+        else
+        {
+            System.out.print("char is special character");
+    
+        }
+        obj.close();
+    }
+    
+}
+
+
+// Write a program to accept gender ("Male" or "Female") and age (1-120) 
+//from command line arguments and print 
+//the percentage of interest based on the given conditions.
+public class Program9 {
+    public static void main(String[] args) {
+        int age = Integer.parseInt(args[1]);
+        if(args[0]=="Female" && age>=1 && age<=58){
+            System.out.println("Interest is 8.2%");
+        }
+        if(args[0]=="Female" && age>=59 && age<=120){
+            System.out.println("Interest is 7.6%");
+        }
+        if(args[0]=="Male" && age>=1 && age<=60){
+            System.out.println("Interest is 9.2%");
+        }
+        if(args[0]=="Male" && age>=61 && age<=120){
+            System.out.println("Interest is 8.3%");
+        }
+        
+    }
+    
+}
+
+//Write a program to convert from upper case to lower case and vice versa of an alphabet and
+// print the old character and new character as shown in example (Ex: a->A, M->m).
+
+import java.util.Scanner;
+import java.lang.*;
+public class Program10 {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter a Char");
+        char input = obj.next().charAt(0);
+        if(Character.isLowerCase(input)){
+            System.out.println(Character.toUpperCase(input));
+        }
+        if(Character.isUpperCase(input)){
+            System.out.println(Character.toLowerCase(input));
+        }
+        obj.close();
+    }
+    
+}
+
+
+//  Write a program to print the color name, based on color code. If 
+//color code in not valid then print "Invalid Code". R->Red, B->Blue, G->Green, O->Orange, 
+//Y->Yellow, W->White.
+
+
+import java.util.Scanner;
+
+public class Program11 {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter a Char");
+        char input = obj.next().charAt(0);
+        if(input=='R'){
+            System.out.println("Red");
+        }
+        if(input=='B'){
+            System.out.println("Blue");
+        }
+        if(input=='G'){
+            System.out.println("Green");
+        }
+        if(input=='O'){
+            System.out.println("Orange");
+        }
+        if(input=='Y'){
+            System.out.println("Yellow");
+        }
+        if(input=='W'){
+            System.out.println("White");
+        }
+        obj.close();
+
+    }
+}
+
+
+//Write a program to print month in words, based on input month in numbers
+
+import java.util.Scanner;
+public class program12 {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter a month");
+        int num = obj.nextInt();
+        switch(num) {
+            case 1:
+              System.out.println("January");
+              break;
+            case 2:
+              System.out.println("February");
+              break;
+            case 3:
+              System.out.println("March");
+              break;
+            case 4:
+              System.out.println("April");
+              break;
+            case 5:
+              System.out.println("May");
+              break;
+            case 6:
+              System.out.println("June");
+              break;
+            case 7:
+              System.out.println("July");
+              break;
+            case 8:
+              System.out.println("August");
+              break;
+            case 9:
+              System.out.println("Sepetember");
+              break;
+            case 10:
+              System.out.println("October");
+              break;
+            case 11:
+              System.out.println("November");
+              break;
+            case 12:
+              System.out.println("December");
+              break;
+
+            default:
+              System.out.println("Invalid Input");
+          }
+          obj.close();
+    }
+    
+}
+
+
+//Write a program to print numbers from 1 to 10 in a single row with one tab space.  
+public class Program13 {
+    public static void main(String[] args) {
+        for(int i = 1; i <= 10; i++)
+        {
+            System.out.print(i+"\t");
+            //System.out.print("     ");
+        }
+    }
+    
+}
+
+
+// Write a program to print even numbers between 23 and 57, each number should 
+// be printed in a separate row. 
+
+public class Program14 {
+    public static void main(String[] args) {
+        for(int i = 23; i <= 57; i++)
+        {
+            if(i%2==0){
+                System.out.println(i);
+
+            }
+        }
+        
+    }
+    
+}
+
+
+// Write a program to check if a given number is prime or not
+
+import java.util.Scanner;
+public class Program15 {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter a Number");
+        int num = obj.nextInt();
+        boolean flag = false;
+        for (int i = 2; i < num; ++i) {
+        
+          if (num % i == 0) {
+            flag = true;
+            break;
+          }
+        }
+    
+        if (!flag){
+            System.out.println(num + " is a Prime Number.");
+
+        }
+        
+        else{
+            System.out.println(num + " is not a Prime Number.");
+
+        }
+        obj.close(); 
+    }
+    
+}
+
+
+//Write a program to print prime numbers between 10 and 99.
+
+public class Program16 {
+    public static void main(String[] args) {
+        for (int i = 10; i <= 99; i++) {
+
+            // if (i == 1 || i == 0)
+            //     continue;
+ 
+            int flag = 1;
+ 
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    flag = 0;
+                    break;
+                }
+            }
+ 
+            if (flag == 1)
+                System.out.println(i);
+        }
+        
+    }
+    
+}
+
+
+//Write a program to add all the values in a given number and print. Ex: 1234->10
+
+import java.util.Scanner;
+public class Program17 {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter a Number");
+        int n = obj.nextInt();
+        int sum = 0;
+        while (n != 0)
+        {
+            sum = sum + n % 10;
+            n = n/10;
+        }
+        System.out.println(sum);
+        obj.close();
+        
+    }
+    
+}
+
+
+//Write a program to print * in Floyds format (using for and while loop)
+
+import java.util.Scanner;
+public class Program18 {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter a Number");
+        int n = obj.nextInt();
+        for (int i=1; i<=n; i++)
+        {
+            for (int j=1; j<=i; j++)
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        obj.close();
+
+        
+    }
+    
+}
+
+
+//Write a program to reverse a given number and print
+
+import java.util.Scanner;
+public class Program19 {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter a Number");
+        int num = obj.nextInt();
+        int reversed=0;
+    
+        while(num != 0) {
+        
+          
+          int digit = num % 10;
+          reversed = reversed * 10 + digit;
+    
+        
+          num /= 10;
+        }
+    
+        System.out.println(reversed);
+        obj.close();
+        
+    }
+    
+}
+
+
+// Write a Java program to find if the given number is palindrome or not
+
+import java.util.Scanner;
+public class Program20 {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter a Number");
+        int num = obj.nextInt();
+        int reversedNum = 0, remainder;
+        int originalNum = num;
+      
+        while (num != 0) {
+          remainder = num % 10;
+          reversedNum = reversedNum * 10 + remainder;
+          num = num/10;
+        }
+        
+        if (originalNum == reversedNum) {
+          System.out.println(originalNum + " is Palindrome.");
+        }
+        else {
+          System.out.println(originalNum + " is not Palindrome.");
+        }
+        obj.close();
+            
+    
+    }
+    
+}
+
+
+// Write a program to print first 5 values which are divisible by 2, 3, and 5.
+
+public class Program21 {
+    public static void main(String[] args) {
+        int count = 0;
+        int i = 1;
+        while(i>0){
+            if(i%2==0){
+                if(i%3==0){
+                    if(i%5==0){
+                        System.out.println(i);
+                        count = count +1;
+
+                    }
+                }
+            }
+            i = i+1;
+            if(count==5){
+                break;
+            }
+
+        }
+    }
+    
+}
+
+
+//Write a program that displays a menu with options 1. Add 2. Sub
+
+import java.util.Scanner;
+public class Program22 {
+    public static void main(String[] args) {
+        int n = 1;
+        while(n>0){
+            System.out.println("Choose Your Option");
+            System.out.print("1. Add ");
+            System.out.println("2. Sub");
+            Scanner obj = new Scanner(System.in);
+            
+            //System.out.println("Enter a Number");
+            int num = obj.nextInt();
+            switch(num){
+                case 1:
+                  System.out.println("Enter First Number");
+                  int num1 = obj.nextInt();
+                  System.out.println("Enter Second Number");
+                  int num2 = obj.nextInt();
+                  int sum = num1+num2;
+                  System.out.println("Addition is: "+sum);
+                  break;
+                
+                case 2:
+                  System.out.println("Enter First Number");
+                  int num3 = obj.nextInt();
+                  System.out.println("Enter Second Number");
+                  int num4 = obj.nextInt();
+                  int sub = num3-num4;
+                  System.out.println("Subtraction is: " +sub);
+                  break;
+                
+                default:
+                  System.out.println("Invalid Input");
+                  break;
+                  
+            }
+            System.out.println("Do you want to continue Y/N");
+            char input = obj.next().charAt(0);
+            if(input=='N' || input=='n'){
+                break;
+            }
+            if(input=='Y' || input=='y'){
+                n = n + 1;
+            }
+            
+        }
+        
+        
+        
+    }
+    
+}

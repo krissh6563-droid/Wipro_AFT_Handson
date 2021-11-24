@@ -24,3 +24,32 @@
 		else{
 			return 1;
 		}
+
+//Of 5 numbers, how many are even or odd?
+
+int[] arr = new int[5];
+		arr[0]=input1;
+		arr[1]=input2;
+		arr[2]=input3;
+		arr[3]=input4;
+		arr[4]=input5;
+		int even_count = 0;
+		int odd_count = 0;
+		int result = 0;
+		if(input6=="even"){
+			for(int i=0;i<5;i++){
+				if(arr[i]%2==0){
+					even_count = even_count + 1;
+				}
+			}
+			result = even_count;
+		}
+		if(input6=="odd"){
+			for(int j=0;j<5;j++){
+				if(arr[j]%2!=0){
+					odd_count = odd_count + 1;
+				}
+			}
+			result = odd_count;
+		}
+		return result;

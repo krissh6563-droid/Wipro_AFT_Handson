@@ -53,3 +53,12 @@ int[] arr = new int[5];
 			result = odd_count;
 		}
 		return result;
+		
+// factorial of a number
+		// Write code here...
+		int result  = 1;
+		while(input1!=0){
+			result = result*input1;
+			input1 = input1 -1;
+		}
+		return result;
